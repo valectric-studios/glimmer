@@ -25,15 +25,15 @@ public final class Games {
         return Games.scanClassInfoSet(classPath.getAllClasses());
     }
 
-    private static boolean scan(Class<?> clazz) {
-        return clazz.isAnnotationPresent(Game.class);
-    }
-
     private static Collection<Class<?>> scanClassInfoSet(ImmutableSet<ClassInfo> classInfoSet) {
         return classInfoSet.stream()
             .map((Function<ClassInfo, Class<?>>) ClassInfo::load)
             .filter(Games::scan)
             .collect(Collectors.toList());
+    }
+
+    private static boolean scan(Class<?> clazz) {
+        return clazz.isAnnotationPresent(Game.class);
     }
 
     private Games() {
