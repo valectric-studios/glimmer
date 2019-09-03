@@ -8,11 +8,9 @@ import java.lang.annotation.Target;
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface GameMeta {
-
    String name();
 
    String displayName();
 
    String version();
-
 }

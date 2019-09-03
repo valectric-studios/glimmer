@@ -3,7 +3,6 @@ package net.valectric.glimmer.plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class GlimmerPlugin extends JavaPlugin {
-
    @Override
    public void onLoad() {
       super.onLoad();
@@ -23,5 +22,4 @@ public class GlimmerPlugin extends JavaPlugin {
    public void onDisable() {
       super.onDisable();
    }
-
 }
