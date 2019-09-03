@@ -1,0 +1,4 @@
+name: "Glimmer"
+main: "net.valectric.glimmer.plugin.GlimmerPlugin"
+author: "Valectric Development Team"
+version: "1.0"
