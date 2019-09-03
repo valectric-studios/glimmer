@@ -14,13 +14,13 @@ public final class Games {
     private static final ClassLoader DEFAULT_CLASS_LOADER = ClassLoader.getSystemClassLoader();
 
     public static Collection<Class<?>> scanPackageRecursive(String namespace) throws IOException {
-        var classPath = ClassPath.from(DEFAULT_CLASS_LOADER);
-        return scanClassInfoSet(classPath.getTopLevelClassesRecursive(namespace));
+        return Games.scanClassInfoSet(
+            ClassPath.from(DEFAULT_CLASS_LOADER).getTopLevelClassesRecursive(namespace));
     }
 
     public static Collection<Class<?>> scanPackage(String namespace) throws IOException {
-        var classPath = ClassPath.from(DEFAULT_CLASS_LOADER);
-        return scanClassInfoSet(classPath.getTopLevelClasses(namespace));
+        return Games.scanClassInfoSet(
+            ClassPath.from(DEFAULT_CLASS_LOADER).getTopLevelClasses(namespace));
     }
 
     public static Collection<Class<?>> scanClassPath(ClassPath classPath) {
