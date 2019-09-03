@@ -2,11 +2,7 @@ package net.valectric.glimmer.samples.survivalgames;
 
 import net.valectric.glimmer.game.Game;
 
-@Game(name = "survivalgames", displayName = "Survival Games", version = "0.1.0")
-public class SurvivalGamesGame {
-
-    // **NOTE:** For efficiency reasons, Glimmer will solely rely on annotations and basic reflection
-    // operations in order to make (mini-)game development as frictionless as could possibly be.
+public final class SurvivalGamesGame extends Game {
 
     // PURE GLIMMER
     // TODO: Implement game states into Glimmer (net.valectric.glimmer.game)

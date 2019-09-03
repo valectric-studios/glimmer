@@ -1,20 +1,16 @@
 package net.valectric.glimmer.game;
 
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+public abstract class Game implements GameHandle {
 
-@Target(ElementType.TYPE)
-@Retention(RetentionPolicy.RUNTIME)
-public @interface Game {
+    private String name;
 
-    String name();
+    @Override
+    public void start() {
 
-    String displayName();
+    }
 
-    String version();
+    @Override
+    public void stop() {
 
-    String[] authors() default {};
-
+    }
 }
