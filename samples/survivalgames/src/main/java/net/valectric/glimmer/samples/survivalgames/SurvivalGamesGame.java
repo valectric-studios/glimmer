@@ -1,6 +1,7 @@
 package net.valectric.glimmer.samples.survivalgames;
 
 import net.valectric.glimmer.game.Game;
+import net.valectric.glimmer.game.GameStopReason;
 
 import java.util.Optional;
 
@@ -41,7 +42,7 @@ public final class SurvivalGamesGame extends Game {
    }
 
    @Override
-   public void stop() {
+   public void stop(GameStopReason reason) {
 
    }
 }
