@@ -13,4 +13,16 @@ public final class GameEntryPoint {
    transient Class<? extends GameConfigurer<? extends Game>> configurerClass;
 
    GameEntryPoint() {}
+
+   public Class<? extends Game> getType() {
+      return this.typeClass;
+   }
+
+   public Class<? extends GameFactory<? extends Game>> getFactory() {
+      return this.factoryClass;
+   }
+
+   public Class<? extends GameConfigurer<? extends Game>> getConfigurer() {
+      return this.configurerClass;
+   }
 }
