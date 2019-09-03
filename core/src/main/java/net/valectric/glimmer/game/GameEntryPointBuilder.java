@@ -17,15 +17,9 @@ public final class GameEntryPointBuilder {
       return this;
    }
 
-   public GameEntryPointBuilder factory(Class<? extends GameFactory<? extends Game>> factoryClass) {
+   public GameEntryPointBuilder factory(Class<? extends GameFactory> factoryClass) {
       this.entryPoint.factory = factoryClass.getName();
       this.entryPoint.factoryClass = factoryClass;
-      return this;
-   }
-
-   public GameEntryPointBuilder configurer(Class<? extends GameConfigurer<? extends Game>> configurerClass) {
-      this.entryPoint.configurer = configurerClass.getName();
-      this.entryPoint.configurerClass = configurerClass;
       return this;
    }
 

@@ -1,15 +1,13 @@
 package net.valectric.glimmer.game;
 
+import java.util.Optional;
+
 public abstract class Game implements GameHandle {
-   private String name;
+   public abstract Optional<Throwable> load();
 
-   @Override
-   public void start() {
+   public abstract Optional<Throwable> configure();
 
-   }
+   public abstract Optional<Throwable> interrupt();
 
-   @Override
-   public void stop() {
-
-   }
+   public abstract Optional<Throwable> verify();
 }

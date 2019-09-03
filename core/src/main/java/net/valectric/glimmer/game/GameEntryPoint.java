@@ -7,10 +7,8 @@ public final class GameEntryPoint {
 
    String type;
    String factory;
-   String configurer;
    transient Class<? extends Game> typeClass;
-   transient Class<? extends GameFactory<? extends Game>> factoryClass;
-   transient Class<? extends GameConfigurer<? extends Game>> configurerClass;
+   transient Class<? extends GameFactory> factoryClass;
 
    GameEntryPoint() {}
 
@@ -21,17 +19,10 @@ public final class GameEntryPoint {
       return this.typeClass;
    }
 
-   public Class<? extends GameFactory<? extends Game>> tryGetFactory() throws ClassNotFoundException {
+   public Class<? extends GameFactory> tryGetFactory() throws ClassNotFoundException {
       if (this.factoryClass == null) {
-         this.factoryClass = (Class<? extends GameFactory<? extends Game>>) Class.forName(this.factory);
+         this.factoryClass = (Class<? extends GameFactory>) Class.forName(this.factory);
       }
       return this.factoryClass;
-   }
-
-   public Class<? extends GameConfigurer<? extends Game>> tryGetConfigurer() throws ClassNotFoundException {
-      if (this.configurerClass == null) {
-         this.configurerClass = (Class<? extends GameConfigurer<? extends Game>>) Class.forName(this.configurer);
-      }
-      return this.configurerClass;
    }
 }
