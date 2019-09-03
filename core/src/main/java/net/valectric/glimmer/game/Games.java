@@ -11,13 +11,15 @@ import java.util.stream.Collectors;
 
 public final class Games {
 
+    private static final ClassLoader DEFAULT_CLASS_LOADER = ClassLoader.getSystemClassLoader();
+
     public static Collection<Class<?>> scanPackageRecursive(String namespace) throws IOException {
-        var classPath = ClassPath.from(ClassLoader.getSystemClassLoader());
+        var classPath = ClassPath.from(DEFAULT_CLASS_LOADER);
         return scanClassInfoSet(classPath.getTopLevelClassesRecursive(namespace));
     }
 
     public static Collection<Class<?>> scanPackage(String namespace) throws IOException {
-        var classPath = ClassPath.from(ClassLoader.getSystemClassLoader());
+        var classPath = ClassPath.from(DEFAULT_CLASS_LOADER);
         return scanClassInfoSet(classPath.getTopLevelClasses(namespace));
     }
 
