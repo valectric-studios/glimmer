@@ -14,15 +14,24 @@ public final class GameEntryPoint {
 
    GameEntryPoint() {}
 
-   public Class<? extends Game> getType() {
+   public Class<? extends Game> tryGetType() throws ClassNotFoundException {
+      if (this.typeClass == null) {
+         this.typeClass = (Class<? extends Game>) Class.forName(this.type);
+      }
       return this.typeClass;
    }
 
-   public Class<? extends GameFactory<? extends Game>> getFactory() {
+   public Class<? extends GameFactory<? extends Game>> tryGetFactory() throws ClassNotFoundException {
+      if (this.factoryClass == null) {
+         this.factoryClass = (Class<? extends GameFactory<? extends Game>>) Class.forName(this.factory);
+      }
       return this.factoryClass;
    }
 
-   public Class<? extends GameConfigurer<? extends Game>> getConfigurer() {
+   public Class<? extends GameConfigurer<? extends Game>> tryGetConfigurer() throws ClassNotFoundException {
+      if (this.configurerClass == null) {
+         this.configurerClass = (Class<? extends GameConfigurer<? extends Game>>) Class.forName(this.configurer);
+      }
       return this.configurerClass;
    }
 }
