@@ -6,10 +6,10 @@
 
   <parent>
     <groupId>net.valectric.glimmer</groupId>
-    <artifactId>glimmer</artifactId>
+    <artifactId>glimmer-samples</artifactId>
     <version>0.1.0-SNAPSHOT</version>
   </parent>
 
-  <name>Glimmer Plugin</name>
-  <artifactId>glimmer-plugin</artifactId>
+  <name>Glimmer Survival Games Sample</name>
+  <artifactId>glimmer-survivalgames-sample</artifactId>
 </project>
