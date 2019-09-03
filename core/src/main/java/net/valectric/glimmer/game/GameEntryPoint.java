@@ -5,12 +5,12 @@ public final class GameEntryPoint {
       return new GameEntryPointBuilder();
    }
 
-   private String bootstrapper;
-   private transient Class<? extends GameBootstrapper<? extends Game>> bootstrapperClass;
+   private String factory;
+   private transient Class<? extends GameFactory<? extends Game>> factoryClass;
 
    private GameEntryPoint() {
-      this.bootstrapper = null;
-      this.bootstrapperClass = null;
+      this.factory = null;
+      this.factoryClass = null;
    }
 
    public static final class GameEntryPointBuilder {
@@ -24,9 +24,9 @@ public final class GameEntryPoint {
          this.entryPoint = new GameEntryPoint();
       }
 
-      public GameEntryPointBuilder bootstrapper(Class<? extends GameBootstrapper<? extends Game>> bootstrapperClass) {
-         this.entryPoint.bootstrapper = bootstrapperClass.getName();
-         this.entryPoint.bootstrapperClass = bootstrapperClass;
+      public GameEntryPointBuilder factory(Class<? extends GameFactory<? extends Game>> factoryClass) {
+         this.entryPoint.factory = factoryClass.getName();
+         this.entryPoint.factoryClass = factoryClass;
          return this;
       }
 

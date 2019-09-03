@@ -1,1 +1,1 @@
-bootstraper: net.valectric.glimmer.samples.survivalgames.SurvivalGamesGameBootstrapper
+factory: net.valectric.glimmer.samples.survivalgames.SurvivalGamesGameFactory
