@@ -2,8 +2,8 @@ package net.valectric.glimmer.game;
 
 public interface GameHandle {
 
-    void start();
+   void start();
 
-    void stop();
+   void stop();
 
 }

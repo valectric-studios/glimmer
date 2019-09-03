@@ -9,10 +9,10 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface GameMeta {
 
-    String name();
+   String name();
 
-    String displayName();
+   String displayName();
 
-    String version();
+   String version();
 
 }
