@@ -1,5 +1,5 @@
 package net.valectric.glimmer.game;
 
-public interface GameFactory {
-   Game createGame();
+public interface GameFactory<G extends Game> {
+   G createGame();
 }

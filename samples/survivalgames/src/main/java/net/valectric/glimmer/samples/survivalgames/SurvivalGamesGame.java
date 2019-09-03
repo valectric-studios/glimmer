@@ -3,7 +3,6 @@ package net.valectric.glimmer.samples.survivalgames;
 import net.valectric.glimmer.game.Game;
 
 public final class SurvivalGamesGame extends Game {
-
    // PURE GLIMMER
    // TODO: Implement game states into Glimmer (net.valectric.glimmer.game)
    // TODO: Implement game settings into Glimmer (net.valectric.glimmer.game)
@@ -14,4 +13,13 @@ public final class SurvivalGamesGame extends Game {
    // PURE PLAYGROUND
    // TODO: Implement random chest content (filler) (net.valectric.playground.inventory)
 
+   @Override
+   public void start() {
+      super.start();
+   }
+
+   @Override
+   public void stop() {
+      super.stop();
+   }
 }
