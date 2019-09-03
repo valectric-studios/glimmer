@@ -1,5 +1,8 @@
 package net.valectric.glimmer.samples.survivalgames;
 
+import net.valectric.glimmer.game.Game;
+
+@Game(name = "survivalgames", displayName = "Survival Games", version = "0.1.0")
 public class SurvivalGamesGame {
 
     // **NOTE:** For efficiency reasons, Glimmer will solely rely on annotations and basic reflection

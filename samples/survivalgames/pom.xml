@@ -12,4 +12,12 @@
 
   <name>Glimmer Survival Games Sample</name>
   <artifactId>glimmer-survivalgames-sample</artifactId>
+
+  <dependencies>
+    <dependency>
+      <groupId>net.valectric.glimmer</groupId>
+      <artifactId>glimmer-core</artifactId>
+      <version>0.1.0-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
 </project>
