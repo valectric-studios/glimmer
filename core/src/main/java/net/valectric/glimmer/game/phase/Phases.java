@@ -1,4 +1,4 @@
-package net.valectric.glimmer.game;
+package net.valectric.glimmer.game.phase;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -7,14 +7,8 @@ import java.lang.annotation.Target;
 
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Game {
+public @interface Phases {
 
-   String name();
-
-   String displayName();
-
-   String prefix();
-
-   Class<? extends GameConfigurer> configurer();
+   String value();
 
 }

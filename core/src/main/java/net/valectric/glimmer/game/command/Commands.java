@@ -1,4 +1,4 @@
-package net.valectric.glimmer.game;
+package net.valectric.glimmer.game.command;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -7,10 +7,8 @@ import java.lang.annotation.Target;
 
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface GameMeta {
-   String name();
+public @interface Commands {
 
-   String displayName();
+   String value();
 
-   String version();
 }
